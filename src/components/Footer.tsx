@@ -31,10 +31,10 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-4 lg:col-span-4 space-y-4">
             <a href="#" className="inline-flex items-center gap-2.5 sm:gap-3 group">
               <img
-                src={`${import.meta.env.BASE_URL}assets/logo.webp`}
+                src={`${import.meta.env.BASE_URL}assets/logo_opt.webp`}
                 alt="EK Studio Logo"
-                width={1536}
-                height={1024}
+                width={768}
+                height={512}
                 loading="lazy"
                 className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />

@@ -47,10 +47,10 @@ export const Header: React.FC<HeaderProps> = ({ onDiscussClick }) => {
             className="group flex items-center gap-2 sm:gap-2.5 focus-visible:outline-2 focus-visible:outline-[#C85A32] rounded-xs shrink-0"
           >
             <img
-              src={`${import.meta.env.BASE_URL}assets/logo.webp`}
+              src={`${import.meta.env.BASE_URL}assets/logo_opt.webp`}
               alt="EK Studio Logo"
-              width={1536}
-              height={1024}
+              width={768}
+              height={512}
               fetchPriority="high"
               className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />

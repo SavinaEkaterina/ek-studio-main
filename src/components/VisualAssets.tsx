@@ -27,7 +27,7 @@ export const HeroCollage: React.FC = () => {
       tag: 'AI Video · VK Клипы',
       title: 'Прогулка по Петербургу',
       subtitle: 'Екатерина II на Дворцовой площади',
-      image: `${import.meta.env.BASE_URL}assets/petersburg_cover.jpg`,
+      image: `${import.meta.env.BASE_URL}assets/petersburg_cover_opt.jpg`,
       badgeColor: 'bg-[#C85A32]'
     },
     {
@@ -342,7 +342,7 @@ export const ProjectArtworkImage: React.FC<ProjectArtworkProps> = ({ id, type, i
         {/* Background Atmosphere Image */}
         <div className="absolute inset-0 z-0">
           <img
-            src={imageUrl ? (imageUrl.startsWith('http') ? imageUrl : `${import.meta.env.BASE_URL}${imageUrl.replace(/^\//, '')}`) : `${import.meta.env.BASE_URL}assets/petersburg_cover.jpg`}
+            src={imageUrl ? (imageUrl.startsWith('http') ? imageUrl : `${import.meta.env.BASE_URL}${imageUrl.replace(/^\//, '')}`) : `${import.meta.env.BASE_URL}assets/petersburg_cover_opt.jpg`}
             alt={title}
             width={941}
             height={1672}

@@ -20,7 +20,7 @@ interface EntrySituationsProps {
 // Mapping of unique scenario illustrations to their specified paths & backup fallbacks
 const scenarioImages: Record<string, { url: string; fallback: string }> = {
   idea: {
-    url: `${import.meta.env.BASE_URL}assets/situations/idea-light.jpg`,
+    url: `${import.meta.env.BASE_URL}assets/situations/idea-light_opt.jpg`,
     fallback: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1000&q=80"
   },
   website: {

@@ -317,7 +317,7 @@ export const siteContent: SiteContent = {
         description: "Промо-видео, где исторический образ Петербурга соединён с современным AI-видеоподходом и превращён в визуальное путешествие.",
         type: "video",
         featured: true,
-        imageUrl: "/assets/petersburg_cover.jpg",
+        imageUrl: "/assets/petersburg_cover_opt.jpg",
         linkText: "Смотреть клип в VK →",
         linkUrl: "https://vk.ru/clip-181151717_456239049"
       },

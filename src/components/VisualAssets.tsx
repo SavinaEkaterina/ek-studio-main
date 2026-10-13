@@ -72,6 +72,9 @@ export const HeroCollage: React.FC = () => {
         <img
           src={`${import.meta.env.BASE_URL}assets/ya.jpg`}
           alt="Екатерина — Основатель EK Studio"
+          width={2048}
+          height={2048}
+          fetchPriority="high"
           onError={(e) => {
             const target = e.currentTarget;
             if (!target.dataset.fallback) {
@@ -127,6 +130,9 @@ export const HeroCollage: React.FC = () => {
                 <img
                   src={teasers[activeTeaser].image}
                   alt={teasers[activeTeaser].title}
+                  width={1200}
+                  height={800}
+                  fetchPriority="high"
                   className="w-full h-full object-cover filter brightness-95"
                 />
                 
@@ -338,6 +344,9 @@ export const ProjectArtworkImage: React.FC<ProjectArtworkProps> = ({ id, type, i
           <img
             src={imageUrl ? (imageUrl.startsWith('http') ? imageUrl : `${import.meta.env.BASE_URL}${imageUrl.replace(/^\//, '')}`) : `${import.meta.env.BASE_URL}assets/petersburg_cover.jpg`}
             alt={title}
+            width={941}
+            height={1672}
+            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 filter brightness-95 contrast-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#140803] via-[#140803]/30 to-black/20"></div>
@@ -381,6 +390,9 @@ export const ProjectArtworkImage: React.FC<ProjectArtworkProps> = ({ id, type, i
           <img
             src={imageUrl}
             alt={title}
+            width={1149}
+            height={1792}
+            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 filter brightness-95"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0D1527] via-[#0D1527]/40 to-[#0D1527]/60"></div>
@@ -451,6 +463,9 @@ export const ProjectArtworkImage: React.FC<ProjectArtworkProps> = ({ id, type, i
             <img
               src={imageUrl}
               alt={title}
+              width={533}
+              height={800}
+              loading="lazy"
               className="w-full h-full object-contain filter drop-shadow-md"
             />
           </div>
@@ -484,6 +499,9 @@ export const ProjectArtworkImage: React.FC<ProjectArtworkProps> = ({ id, type, i
           <img
             src={imageUrl || "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80"}
             alt={title}
+            width={800}
+            height={800}
+            loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-[1.02] brightness-90"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#181513] via-[#181513]/40 to-transparent"></div>

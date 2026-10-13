@@ -181,6 +181,9 @@ export const TaskTypes: React.FC<EntrySituationsProps> = ({ onSelectSituation })
                     <img
                       src={activeImageData.url}
                       alt={activeSituation.title}
+                      width={1024}
+                      height={572}
+                      loading="lazy"
                       onError={(e) => {
                         const target = e.currentTarget;
                         if (activeImageData.fallback && target.src !== activeImageData.fallback) {

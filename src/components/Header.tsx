@@ -49,6 +49,9 @@ export const Header: React.FC<HeaderProps> = ({ onDiscussClick }) => {
             <img
               src={`${import.meta.env.BASE_URL}assets/logo.webp`}
               alt="EK Studio Logo"
+              width={1536}
+              height={1024}
+              fetchPriority="high"
               className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <span className="font-serif-display font-bold text-xl sm:text-2xl tracking-wider text-[#FAF8F5] group-hover:text-[#C85A32] transition-colors">

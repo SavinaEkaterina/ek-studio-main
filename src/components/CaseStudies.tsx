@@ -32,9 +32,35 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
   };
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const [shouldLoadVideo, setShouldLoadVideo] = useState<boolean>(false);
+
+  React.useEffect(() => {
+    if (!containerRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setShouldLoadVideo(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '200px' }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  React.useEffect(() => {
+    if (shouldLoadVideo && videoRef.current && isPlaying) {
+      videoRef.current.play().catch(() => {
+        setIsPlaying(false);
+      });
+    }
+  }, [shouldLoadVideo, isPlaying]);
 
   const togglePlay = () => {
+    setShouldLoadVideo(true);
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
@@ -219,16 +245,16 @@ export const CaseStudies: React.FC<CaseStudiesProps> = () => {
             
             {/* Left Column (7 cols): Video Media Player */}
             <div 
+              ref={containerRef}
               className="lg:col-span-7 cursor-pointer relative group/video rounded-2xl overflow-hidden shadow-2xl bg-[#100D0B] border border-white/10"
               onClick={togglePlay}
             >
               <video
                 ref={videoRef}
-                autoPlay
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload={shouldLoadVideo ? "metadata" : "none"}
                 onLoadedMetadata={() => {
                   if (videoRef.current) {
                     videoRef.current.currentTime = 0;

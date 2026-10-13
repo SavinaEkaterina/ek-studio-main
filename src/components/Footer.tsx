@@ -33,6 +33,9 @@ export const Footer: React.FC = () => {
               <img
                 src={`${import.meta.env.BASE_URL}assets/logo.webp`}
                 alt="EK Studio Logo"
+                width={1536}
+                height={1024}
+                loading="lazy"
                 className="h-8 sm:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
               <span className="font-serif-display font-bold text-2xl sm:text-3xl tracking-wider text-[#FAF8F5] group-hover:text-[#C85A32] transition-colors">

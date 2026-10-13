@@ -132,6 +132,9 @@ export const Process: React.FC = () => {
                   <img
                     src={processImages[activeStepIndex]?.url}
                     alt={processImages[activeStepIndex]?.alt}
+                    width={1200}
+                    height={896}
+                    loading="lazy"
                     onError={(e) => {
                       const target = e.currentTarget;
                       const fallback = processImages[activeStepIndex]?.fallbackUrl;

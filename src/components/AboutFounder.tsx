@@ -71,6 +71,9 @@ export const AboutFounder: React.FC = () => {
                 <img
                   src={aboutFounder.founderImageUrl ? (aboutFounder.founderImageUrl.startsWith('http') ? aboutFounder.founderImageUrl : `${import.meta.env.BASE_URL}${aboutFounder.founderImageUrl.replace(/^\//, '')}`) : `${import.meta.env.BASE_URL}assets/ekaterina_savina.jpg`}
                   alt={aboutFounder.founderName}
+                  width={2048}
+                  height={2048}
+                  loading="lazy"
                   onError={(e) => {
                     const target = e.currentTarget;
                     if (!target.dataset.fallback) {

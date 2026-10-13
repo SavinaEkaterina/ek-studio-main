@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://savinaekaterina.github.io/ek-studio-main/sitemap.xml
